@@ -77,7 +77,7 @@ Databinding을 사용하면 `tv.text = it`이런 코드는 작성하지 않아�
 DataBinding을 잘 사용하는 방법은 차차 공부해가면서 알아봐야할듯...   
 참고할만한 사이트 
 * [Android MVVM 을 위한 Databinding](https://medium.com/@jsuch2362/android-mvvm-%EC%9D%84-%EC%9C%84%ED%95%9C-databinding-34cd9be44c63)
-
+* [MVVM AAC Databinding 사용법](https://medium.com/@gus0000123/android-databinding-%EC%82%AC%EC%9A%A9%EB%B2%95-9a3480a3bfc7)
 
 # 연사
 MVVM은 마틴 파울러의 '[프레젠테이션 모델 디자인 패턴](https://martinfowler.com/eaaDev/PresentationModel.html)'의 변형으로 마소의 아키텍트인 켄 쿠퍼와 테드 피터스에 의해서 발명되었다.
