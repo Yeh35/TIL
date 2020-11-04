@@ -15,7 +15,7 @@ public class Program {
         Flowable<String> flowable =
                 Flowable.create(new FlowableOnSubscribe<String>() {
 
-                    @java.lang.Override
+                    @Override
                     public void subscribe(FlowableEmitter<String> emitter) throws Exception {
                         String[] datas = {"Hello, world!", "안녕, RxJava!"};
 
@@ -31,35 +31,42 @@ public class Program {
                     }
                 }, BackpressureStrategy.BUFFER);
 
-        flowable.observeOn(Schedulers.computation())
-                .subscribe(new Subscriber<String>() {
+        Subscriber subscriber = new Subscriber<String>() {
 
-                    private Subscription subscription;
+            private Subscription subscription;
 
-                    @java.lang.Override
-                    public void onSubscribe(Subscription s) {
-                        this.subscription = s;
-                        this.subscription.request(1L);
-                    }
+            @Override
+            public void onSubscribe(Subscription s) {
+                this.subscription = s;
+                this.subscription.request(1L);
+            }
 
-                    @java.lang.Override
-                    public void onNext(String data) {
-                        String threadName = Thread.currentThread().getName();
-                        System.out.println(threadName + ": " + data);
-                        this.subscription.request(1L);
-                    }
+            @Override
+            public void onNext(String data) {
+                String threadName = Thread.currentThread().getName();
+                System.out.println(threadName + ": " + data);
+                this.subscription.request(1L);
+            }
 
-                    @java.lang.Override
-                    public void onError(java.lang.Throwable t) {
-                        t.printStackTrace();
-                    }
+            @Override
+            public void onError(java.lang.Throwable t) {
+                t.printStackTrace();
+            }
 
-                    @java.lang.Override
-                    public void onComplete() {
-                        String threadName =  Thread.currentThread().getName();
-                        System.out.println(threadName + ": 완료" );
-                    }
-                });
+            @Override
+            public void onComplete() {
+                String threadName =  Thread.currentThread().getName();
+                System.out.println(threadName + ": 완료" );
+            }
+        };
+
+        flowable
+                .observeOn(Schedulers.computation())
+                .subscribe(subscriber);
+
+        flowable
+                .observeOn(Schedulers.computation())
+                .subscribe(subscriber);
 
         Thread.sleep(500L);
     }
