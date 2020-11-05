@@ -10,3 +10,12 @@ fun bindImage(view: ImageView, res: Int?) {
         .load(res)
         .into(view)
 }
+
+@BindingAdapter("bind_image", "error_image")
+fun bindImage(view: ImageView, res: Int?, error: Int) {
+    Glide.with(view.context)
+        .load(res)
+        .error(error)
+        .into(view)
+}
+

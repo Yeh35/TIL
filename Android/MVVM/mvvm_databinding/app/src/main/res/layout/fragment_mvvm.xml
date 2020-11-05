@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
             name="user"
             type="com.example.mvvm_databinding.User"/>
+        <variable
+            name="address"
+            type="com.example.mvvm_databinding.Address"/>
     </data>
 
     <FrameLayout
@@ -32,12 +34,11 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                android:text="@{user.address}" />
+                android:text="@{address.address}" />
 
             <ImageView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:bind_image="@{user.profileURL}"
-                />
+                app:bind_image="@{user.profileURL}"/>
 
         </LinearLayout>
 
