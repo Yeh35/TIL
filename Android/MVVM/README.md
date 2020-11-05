@@ -301,7 +301,7 @@ BindingAdapter가 우리가 정의해준 `bind_image`, `error_image` 속성들�
 # 아키텍처 가이드 구현한다면?
 ![architecture](./../final-architecture.png)
 
-[MVVM AAC Databinding 사용법](https://medium.com/@gus0000123/android-jetpack-databinding-%EC%82%AC%EC%9A%A9%EB%B2%95-3-%EC%83%81%EC%84%B8%ED%8E%B8-afcc96ac3690)글에서 나온 예제인데 폴더 구조와 Class를 보고 이해가 갔다. 
+[MVVM AAC Databinding 사용법](https://medium.com/@gus0000123/android-jetpack-databinding-%EC%82%AC%EC%9A%A9%EB%B2%95-3-%EC%83%81%EC%84%B8%ED%8E%B8-afcc96ac3690)글에서 나온 예제인데 폴더 구조와 Class를 보고 이해가 갔다.    
 나중에 안간다면 글의 예제소스를 [DatabindingSample](./DatabindingSample)에 남겨놨다.
 
 ![DatabindingSample](./DatabindingSample.png)
