@@ -298,13 +298,13 @@ BindingAdapter가 우리가 정의해준 `bind_image`, `error_image` 속성들�
 ![mvvm_fragment](./mvvm_fragment.png)
 
 
-# 구글 앱 아키텍처 가이드로 구현해보기
-1. 아키택쳐 가이드에 준하는 패키지 구조 확립
-2. Room을 이용한 데이터베이스 세팅
-3. 최초 데이터를 입력시켜줄 Worker클래스 작성
-4. assets에 샘플 데이터 입력
+# 아키텍처 가이드 구현한다면?
+![architecture](./../final-architecture.png)
 
+[MVVM AAC Databinding 사용법](https://medium.com/@gus0000123/android-jetpack-databinding-%EC%82%AC%EC%9A%A9%EB%B2%95-3-%EC%83%81%EC%84%B8%ED%8E%B8-afcc96ac3690)글에서 나온 예제인데 폴더 구조와 Class를 보고 이해가 갔다. 
+나중에 안간다면 글의 예제소스를 [DatabindingSample](./DatabindingSample)에 남겨놨다.
 
+![DatabindingSample](./DatabindingSample.png)
 
 # 역사
 MVVM은 마틴 파울러의 '[프레젠테이션 모델 디자인 패턴](https://martinfowler.com/eaaDev/PresentationModel.html)'의 변형으로 마소의 아키텍트인 켄 쿠퍼와 테드 피터스에 의해서 발명되었다.
