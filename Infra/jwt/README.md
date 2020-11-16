@@ -117,3 +117,11 @@ JWT 구조와 어떤 과정으로 생성이되는지 알았다.
 ## 참고
 * [JSON 웹 토큰 소개](https://jwt.io/introduction/)
 * [JSON Web Token 소개 및 구조](https://velopert.com/2389)
+
+
+## 읽어봐야하는 것
+* https://vladmihalcea.com/hibernate-identity-sequence-and-table-sequence-generator/
+* https://velopert.com/2389
+* https://jwt.io/introduction/
+
+* 해결해야하는 의문 base64 패딩을 지워도 잘 동작하는가?
