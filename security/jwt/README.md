@@ -103,11 +103,53 @@ HMACSHA256(
 이렇게 만든 해쉬를, `base64`형태로 나타내면 된다.
 (만들어진 `해쉬코드` -> `base64`로 인코딩)
 
-## 인코딩/디코딩
+## 만들어보기
+```javascript
+const crypto = require('crypto');
+
+const header = {
+    "typ": "JWT",
+    "alg": "HS256"
+  };
+
+const payload = {
+    "iss": "velopert.com",
+    "exp": "1485270000000",
+    "https://velopert.com/jwt_claims/is_admin": true,
+    "userId": "11028373727102",
+    "username": "velopert"
+};
 
 
-주의: base64로 인코딩을 할 때 dA== 처럼 뒤에 = 문자가 한두개 붙을 때가 있습니다. 이 문자는 base64 인코딩의 padding 문자라고 부릅니다.
-JWT 토큰은 가끔 URL 의 파라미터로 전달 될 때도 있는데요, 이 = 문자는, url-safe 하지 않으므로, 제거되어야 합니다. 패딩이 한개 생길 때도 있고, 두개 생길 때도 있는데, 전부 지워(제거해줘도 디코딩 할 때 전혀 문제가 되지 않습니다)
+// encode to base64
+const encodedHeader = Buffer.from(JSON.stringify(header))
+    .toString('base64')
+    .replace('=', '');
+
+const encodedPayload = Buffer.from(JSON.stringify(payload))
+    .toString('base64')
+    .replace('=', '');
+
+const signature = crypto.createHmac('sha256', 'secret')
+    .update(encodedHeader + '.' + encodedPayload)
+    .digest('base64')
+    .replace('=', '');
+               
+
+console.log('header: ',encodedHeader);
+console.log('payload: ',encodedPayload);
+console.log('signature: ',signature);
+console.log(encodedHeader + '.' + encodedPayload + '.' + signature);
+```
+
+![여기 스크립트가 있다.](./jwt_script.js)
+
+    base64로 인코딩을 할 때 dA== 처럼 뒤에 = 문자가 한두개 붙을 때가 있습니다. 
+    이 문자는 base64 인코딩의 padding 문자라고 부릅니다.
+    JWT 토큰은 가끔 URL 의 파라미터로 전달 될 때도 있는데요, 이 = 문자는, url-safe 하지 않으므로, 제거되어야 합니다. 패딩이 한개 생길 때도 있고, 두개 생길 때도 있는데, 전부 지워
+
+
+## 
 
 ## 결론
 JWT 구조와 어떤 과정으로 생성이되는지 알았다.
@@ -124,4 +166,4 @@ JWT 구조와 어떤 과정으로 생성이되는지 알았다.
 * https://velopert.com/2389
 * https://jwt.io/introduction/
 
-* 해결해야하는 의문 base64 패딩을 지워도 잘 동작하는가?
+* 
