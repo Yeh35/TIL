@@ -148,8 +148,19 @@ console.log(encodedHeader + '.' + encodedPayload + '.' + signature);
     이 문자는 base64 인코딩의 padding 문자라고 부릅니다.
     JWT 토큰은 가끔 URL 의 파라미터로 전달 될 때도 있는데요, 이 = 문자는, url-safe 하지 않으므로, 제거되어야 합니다. 패딩이 한개 생길 때도 있고, 두개 생길 때도 있는데, 전부 지워
 
+## HTTP에서 사용할 때 
+사용자는 엑세스하기 원할때 마다 일반적으로 `Bearer 스키마를 사용하는 Authorization 헤더`에 JWT를 전송한다.
 
-## 
+```
+Authorization: Bearer <token>
+```
+
+필요한 데이터를 토큰에 다 저장하고 있으면 DB를 거치지 않고도 작업을 할 수 있다. 
+(물론 다 그런건 아니다.)
+
+## 보안 문제를 방지
+* 일반적으로 필요한 것보다 오래 토큰을 보관하면 안된다.
+* 민감한 세션 데이터를 브라우저 저장소에 넣어선 안된다.
 
 ## 결론
 JWT 구조와 어떤 과정으로 생성이되는지 알았다.
@@ -165,5 +176,3 @@ JWT 구조와 어떤 과정으로 생성이되는지 알았다.
 * https://vladmihalcea.com/hibernate-identity-sequence-and-table-sequence-generator/
 * https://velopert.com/2389
 * https://jwt.io/introduction/
-
-* 

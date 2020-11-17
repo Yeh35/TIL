@@ -23,7 +23,7 @@ const encodedPayload = Buffer.from(JSON.stringify(payload))
     .toString('base64')
     .replace('=', '');
 
-const signature = crypto.createHmac('sha256', 'secret1')
+const signature = crypto.createHmac('sha256', 'secret')
     .update(encodedHeader + '.' + encodedPayload)
     .digest('base64')
     .replace('=', '');
