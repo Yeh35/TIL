@@ -1,4 +1,4 @@
-# Java 로깅 프레임 워크에 대한 전반적인 고민...
+# [SLF4J] 로깅 프레임 워크 선택에 대한 고민
 Java에서는 많은 로깅 시스템이 존재하는데 그런 것들의 총합이다.
 
 ## [common logging](https://commons.apache.org/proper/commons-logging/)
