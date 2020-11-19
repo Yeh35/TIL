@@ -10,10 +10,9 @@ Today I Learned. 그날 그날 모든 활동들을 정리
 * [encoding_decoding](./infra/encoding_decoding)
 
 # Java
-* [[SLF4J] 로깅 프레임 워크 선택에 대한 고민](./java/logging.md)
+* [SLF4J 로깅 프레임 워크 선택에 대한 고민](./java/logging)
 
 # security
 * [jwt](./security/jwt)
 
-# topic
-* [C언어(저수준) 만능주의 관련 정리해준다](./topic/C언어(저수준) 만능주의 관련 정리해준다.md)
+# [topic](./topic)
