@@ -23,6 +23,12 @@ Today I Learned. 그날 그날 모든 활동들을 정리
 # Design
 * ![AdobeXD 시작하기](./Design/Tool/AdobeXD/start.md)
 
+# English
+* [가벼운 학습지](./english/가벼운학습지)
+
+# Book
+* [부자 되는 법을 가르쳐 드립니다.](./book/부자_되는_법을_가르쳐_드립니다.md)
+
 # TODO!
 * Android/Intellij 디버깅하는 여러 방법
 * [파급효과 범위 넘어갈때 막는 방법](https://stackoverflow.com/questions/31948189/material-ripple-effect-hidden-by-other-view-in-layout)
