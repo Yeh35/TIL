@@ -41,6 +41,8 @@ Today I Learned. 그날 그날 모든 활동들을 정리
 
 # Movie~
 * [아메리칸 셰프](./movie/아메리칸셰프)
+* [인턴](./movie/인턴)
+
 
 # TODO!
 * Android/Intellij 디버깅하는 여러 방법
