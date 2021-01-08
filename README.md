@@ -23,6 +23,7 @@ Today I Learned. 그날 그날 모든 활동들을 정리
 
 # [topic](./topic)
 * [C언어(저수준) 만능주의 관련 정리해준다](./topic/C언어(저수준)_만능주의_관련_정리해준다.MD)
+* [약관은 제대로 읽자 어도비 수수료](./topic/adoby_fees.md)
 
 # Design
 * ![AdobeXD 시작하기](./Design/Tool/AdobeXD/start.md)
